@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="icon" href="./images/logo.png">
+	<script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
+	<title>Himnario Adventista</title>
+</head>
+<body>
+	<div class="container">
+		<nav id="menu" class="d-flex">
+			<div class="m-item d-flex" id="logo-btn">
+				<img src="./images/logo_black.png" alt="logo iasd" id="logo">
+			</div>
+			<div class="m-item d-flex" id="indice">Índice</div>
+			<div class="m-item d-flex" id="salir">Salir</div>
+		</nav>
+
+
+		<div id="search" class="d-flex">
+			<div id="title">
+				Himnario Adventista
+				<img src="./images/logo_black.png" alt="logo iasd" id="logo-t">
+			</div>
+
+			<form id="s-form" method="post">
+				<input type="button" id="letra" class="button" value="Letra" onclick="pressed(this)">
+				<input type="button" id="musica" class="button" value="Música" onclick="pressed(this)">
+				<input type="button" id="cantado" class="button" value="Cantado" onclick="pressed(this)">
+				<input type="text" id="tf-search-num" class="blank-back txt-fields" placeholder="No." required maxlength="3" autofocus>
+				<input type="search" id="tf-search" class="blank-back txt-fields" placeholder="Título" required>
+				<span id="options" class="blank-back"></span>
+				<input type="button" id="play" class="button" value="Iniciar">
+			</form><script type="text/javascript" src="./js/play.js"></script>
+		</div>
+
+
+		<main id="app">
+			<div id="left" class="siders"></div>
+			<div id="v-control" class="d-flex">
+				<div id="btn-play-pause" class="button d-flex" data-state="play">
+					<img src="./images/controls/pause.png" alt="button play">
+				</div>
+				<div id="btn-return" class="button d-flex">
+					<img src="./images/controls/return.png" alt="button return">
+				</div>
+			</div>
+			<div id="right" class="siders"></div>
+			<audio id="mp3" hidden></audio>
+			<script type="text/javascript" src="./js/controls.js"></script>
+		</main>
+
+		<div id="index">
+			<div id="indx-btns">
+				<input type="button" id="basic" class="button" value="Básico" style="width:10rem;font-size:1.2rem;height:fit-content;">
+				<input type="button" id="titles" class="button" value="Títulos" style="width:10rem;font-size:1.2rem;height:fit-content;">
+				<!--input type="button" id="themes" class="button" value="Temas" style="width:10rem;font-size:1.2rem;height:fit-content;"-->
+			</div>
+			<div id="indx-cont"></div>
+			<div id="author" class="blank-back">
+				Desarrollado por: Asis Gamaliel Rios Serrano<br>
+				Version: 2.0.0<br>
+				Música: Atribuida a sus autores<br>
+				Letra: Atribuida a sus autores
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/indexes.js"></script>
+
+
+		<footer id="foot" class="d-flex">
+			<p>Iglesia Adventista del Séptimo Día | 2024</p>
+		</footer>
+	</div>
+</body>
+</html>

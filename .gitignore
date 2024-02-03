@@ -1,0 +1,6 @@
+# Ignore letra & musica folders
+letra/
+musica/
+
+# Ignore node_modules folder
+node_modules/
